@@ -92,13 +92,13 @@ public class History extends AppCompatActivity {
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showList(txt_date.getText().toString());
+                showList();
             }
         });
     }
 
-    public void showList(String created_at){
-        compositeDisposable.add(myAPI.history(created_at)
+    public void showList(){
+        compositeDisposable.add(myAPI.history(this.created_at)
         .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<String>() {
