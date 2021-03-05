@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstPage">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:text="version 0.0 , DproP@rking"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/service_charge"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="เก็บค่าบริการ"
+        android:textSize="24sp"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="ประวัติเก็บการบริการ"
+        android:textSize="24sp"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round_button"
+        android:padding="15dp"
+        android:shadowColor="#00FFFFFF"
+        app:backgroundTint="@color/purple_700"
+        app:icon="@drawable/sign_out"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="70px"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:strokeColor="@color/purple_700"
+        app:strokeWidth="10px" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

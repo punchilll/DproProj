@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DproProj</string>
+
+    <string name="lock_prompt">เลือกรายการ...</string>
+    <string-array name="list_lock">
+        <item>เล็ก</item>
+        <item>กลาง</item>
+        <item>ใหญ่</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

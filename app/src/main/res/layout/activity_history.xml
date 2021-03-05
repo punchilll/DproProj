@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:text="version 0.0 , DproP@rking"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="390dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        app:icon="@drawable/calendar"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="80px"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_date"
+        app:layout_constraintTop_toTopOf="@+id/txt_date"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        app:icon="@drawable/search"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="80px"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toEndOf="@+id/txt_date"
+        app:layout_constraintTop_toTopOf="@+id/txt_date"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="207dp"
+        android:layout_height="36dp"
+        android:text="Date"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
