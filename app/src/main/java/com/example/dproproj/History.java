@@ -75,6 +75,7 @@ public class History extends AppCompatActivity {
         btn_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                created_at="";
                 DatePickerDialog datePickerDialog = new DatePickerDialog(History.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -91,24 +92,25 @@ public class History extends AppCompatActivity {
 
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                showList();
+            public void onClick(View view) {
+                String date = txt_date.getText().toString();
+                //Toast.makeText(History.this, created_at+"", Toast.LENGTH_SHORT).show();
+                showList(date);
             }
         });
     }
 
-    public void showList(){
-        compositeDisposable.add(myAPI.history(this.created_at)
-        .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<String>() {
-                    @Override
-                    public void accept(String s) throws Exception {
-
-
-                        Toast.makeText(History.this, ""+s, Toast.LENGTH_SHORT).show();
-                    }
-                })
+    public void showList(String created_at){
+        //Toast.makeText(History.this, "" + created_at, Toast.LENGTH_SHORT).show();
+        compositeDisposable.add(myAPI.history(created_at)
+                .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new Consumer<String>() {
+                            @Override
+                            public void accept(String s) throws Exception {
+                                    Toast.makeText(History.this, "" + s, Toast.LENGTH_SHORT).show();
+                            }
+                        })
         );
     }
 
